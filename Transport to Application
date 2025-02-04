@@ -186,10 +186,10 @@
     Flooding
     Amplification
     Low and slow
-    Drive-By Downloads
-    BeEF Framework
+    Drive-By Downloads - no visible change
+    BeEF Framework - browser exploitation tools
 
-  ~DNS (TCP/UDP 53)
+  ~DNS (TCP/UDP 53) (Hostname > IP address)
     DNS query/response
     Resolves Names to IP addresses
     Queries and responses use UDP
@@ -205,8 +205,74 @@
     NS - Name Server record
     SOA - Start of Authority
 
-  ~
-  
+  ~Architecture
+    Root Domain (.)
+    Top-Level Domain (.com,.org,.net,.gov)
+    Second-Level Domain (.google,.iana.wikipedia)
+    Third-Level Domain (www,drive,mail)
+
+  ~FTP(TCP 20/21)
+    RFC 959
+    Port 21 open for Control
+    Port 20 only open during data transfer
+
+    Authentication or Anonymous
+    Clear Text
+    Modes:
+      Active (default) - server reaches out on random high port
+      Passive - server opens new port for transfer client reaches out 
+
+  ~FTP Active Issues
+    NAT and Firewall traversal issues
+    Complications with tunneling through SSH
+    Passive FTP solves issues related to Active mode and is most often used in modern systems
+
+  ~TFTP(UDP 69) - No User interation no shell. (Trivial File Transfer Protocol)
+    Clear-Text
+    Reliability provided at Application layer
+    Used by routers and switches to transfer IOS and config files
+
+  ~SMTP(TCP 25)
+    Used to send email
+    No encryption
+    SMTP over TLS/SSL (SMTPS)
+      TCP Ports 587 and 465
+
+  ~POP(TCP 110)
+    Receives email
+    No sync with server
+    No encryption
+    POP3
+
+  ~IMAP(TCP 143)
+    Receives email
+    Sync with server
+    No encryption
+    IMAP4
+
+  ~DHCP(UDP 67/68)
+    DHCPv4
+      DORA
+      Discover (Broadcast)
+      Offer (Unicast)
+      Request (Broadcast)
+      Acknowlege (Unicast)
+    
+    DHCPv6
+      If Managed flag is set during SLAAC:
+      Solicit (Multicast)
+      Advertise (Unicast)      
+      Request or Information Request (Multicast)
+      Reply (Unicast)
+
+  ~NTP(UDP 123)
+    Stratum 0 - authoritative time source
+    Up to Stratum 15
+    Vulnerable to crafted packet injection
+    Can break time sensitive applications
+
+
+
   
   
      
