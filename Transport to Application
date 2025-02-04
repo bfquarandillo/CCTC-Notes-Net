@@ -1,0 +1,216 @@
+  Transport to Application Layer - Day 1
+
+  ~Outcomes
+    Explain OSI Layer 4 Ports, Protocols and Headers
+    Explain OSI Layer 5 Protocols and Headers
+    Explain OSI Layer 6 Functions and Responsibilities
+    Explain OSI Layer 7 Protocols and Headers
+
+  ~Protocols
+    Connection-oriented
+      TCP - Segments
+      Unicast traffic
+    Connection-less
+      UDP - Datagrams
+      Broadcast, Multicast, or Unicast Traffic
+
+  ~Port Ranges
+    0-1023 Well Known (System)
+    1024 - 49151 Registered (User)
+    49152-65535 Dynamic (Private)
+
+  ~TCP Reliability
+    Syn Syn-Ack Ack
+    Syn-Ack = open port
+    Syn = stealth scan not connection made not in logs
+
+    Connection establishment
+      3-way handshake
+    Data Transfer
+      Established phase
+    Connection Termination
+      4-way Termination
+      Reset connection
+
+  ~TCP Flags
+    URG, ACK=0x10, PSH, RST, SYN=0x02, FIN, SYN-ACK=0x12
+
+  ~TCP Options
+    0 - End of Options
+    1 - No Options (NOP)
+    2 - Maximum Segment Size (MSS)
+    3 - TCP Windows Scaling
+    4 - Selective ACK (SACK) Permitted
+    5 - SACK
+    8 - TCP Timestamps
+
+  ~VPN
+    Types:
+      Remote Access(client-to-site)
+      Site-to-Site
+
+  ~L2TP (UDP 1701)
+    RFC 2661
+    Origins from Cisco L2F and Microsoft PPTP
+    Tunnel only. No Encryption.
+
+  ~PPTP (TCP 1723)
+    RFC 2637
+    Microsoft
+    Provides encryption
+    Obsolete with many vulnerabilities
+
+  ~L2F (UDP 1701)
+    Cisco
+    Tunnel only. No Encryption
+    Requires L2F Network Server (LNS) and a L2F Access Concentrator (LAC)
+
+  ~IPSEC
+    Modes: Transport or Tunnel
+
+    Headers:
+    ESP (protocol 50)
+    AH (protocol 51)
+    IKE (UDP port 500 or 4500)
+
+  ~OpenVPN
+    Open source
+    Uses OpenSSL for encryption
+    UDP*/TCP port 1194
+
+  ~Proxies
+    Ask Proxy to do processes for you, can hide local IP from adversaries on other side.
+    It allows proxy to control every part of process if someone connects to it proxy will see traffic
+    even traffic that is not normally visible because it is loaded from the proxy. Control dat flow.
+
+  ~SOCKS 4/5 (TCP 1080) (more generic proxy)
+    RFC 1928
+    Uses various Client / Server exchange messages
+      Client can provide authentication to server
+      Client can request connections from server
+
+  ~SOCKS4
+    No Authentication
+    Only IPv4
+    No UDP support
+    No Proxy binding. Client’s IP is not relayed to destination.
+
+  ~SOCKS5
+    Various methods of Authentication
+    IPv4 and IPv6 support
+    UDP support
+    Supports Proxy binding. Client’s IP is relayed to destination.
+
+  ~NETBIOS
+    TCP 139 and UDP 137/138
+    Name Resolution (15 characters)
+    Largely replaced by DNS
+
+  ~SMB/CIFS (TCP 445)
+    SMB Rides over Netbios
+    Netbios Dgram Service - UDP 138
+    Netbios Session Service - TCP 139
+    SAMBA and CIFS are just flavors of SMB
+
+  ~RPC (Any Port)
+    Allows a program to execute a request on a local/remote computer
+    Hides network complexities
+    XML, JSON, SOAP, and gRPC
+    User application will:
+      Request for information from external server
+      Receives the information from the external server
+      Display collected data to User
+
+  ~API
+    Framework of rules and protocols for software components to interact.
+    Methods, parameters, and data formats for requests and responses.
+    REST and SOAP
+
+  ~Layer 6 (data modification before it reaches user)
+    Responsibilities
+      Translation
+      Formating
+      Encoding (ASCII, EBCDIC, HEX, BASE64)
+      Encryption (Symmetric or Asymmetric)
+      Compression
+
+  ~Layer 7
+  
+  Telnet (TCP 23)
+    Remote Login
+    Authentication
+    Clear Text
+    Credentials susceptible to interception
+    
+  SSH (TCP 22) (requires server)
+    Messages provide:
+    Client/server authentication
+    Asymmetric or PKI for key exchange
+    Symmetric for session
+    User authentication
+    Data stream channeling
+    
+~Components of SSH
+  Client / Server / Session
+  Keys:
+    User Key - Asymmetric public key used to identify the user to the server
+    Host Key - Asymmetric public key used to identify the server to the user
+    Session Key - Symmetric key created by the client and server to protect the session’s communication.
+
+  ~SSH Concerns
+    Using password authentication only
+    Key rotation
+    Key management
+    Implementation specification (libssh, sshtrangerthings)
+
+  ~SSH-Keygen 
+    Create your own SSH Public/Private keys
+      -t Encryption (rsa|dsa|ecdsa|ed25519)
+      -b Bit length (1024|2048|4096)
+      -C Adds a comment
+    ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub
+
+  ~SSH-Copy-ID
+    Copies your SSH Public key to the remote server
+    Saves key to ~/.ssh/authorized_keys on remote server
+    Allows you to authenticate with server using your key instead of password
+    Must secure your private key
+
+  ~HTTP(s) (TCP 80/443)
+    User Request methods
+    GET / HEAD / POST / PUT
+    Server response Codes
+    100, 200, 300, 400, 500
+
+  ~Vulnerabilities
+    Flooding
+    Amplification
+    Low and slow
+    Drive-By Downloads
+    BeEF Framework
+
+  ~DNS (TCP/UDP 53)
+    DNS query/response
+    Resolves Names to IP addresses
+    Queries and responses use UDP
+    DNS response larger than 512 bytes use TCP
+    DNS Zone Transfer
+    DNS Security
+
+  ~DNS Records
+    A - IPv4 record
+    AAAA - IPv6 record
+    MX - Mail Server record
+    TXT - Human-readable text
+    NS - Name Server record
+    SOA - Start of Authority
+
+  ~
+  
+  
+  
+     
+  
+
+
+
