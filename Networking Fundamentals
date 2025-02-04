@@ -1,0 +1,212 @@
+Networking Fundamentals - Day 1
+
+  ~Outcomes
+    Discuss Network Fundamentals
+    Describe Security Implications Present in Header Fields
+    Explain Layer 1 Data Communications and Technologies
+    Explain Layer 2 Switching and Technologies 
+
+  ~Protocol Data Unit = PDU Data referring to layers of OSI Model
+    Session-Application = Data
+    Transport = Segment/Datagram
+    Network = Packet
+    Data Link = Frame
+    Physical = Bit
+
+  ~Internet Standards Organizations
+    IETF - RFC’s
+    IANA - Internet Numbers
+    IEEE - LAN/WAN electrical standards
+
+  ~Layer 1 (Binary,Decimal,Hexadecimal,Base64)
+    Binary = Base2 0,1
+      Groupings: bit, nibble, byte, half-word, word
+    Decimal = Base10 (0-9)
+    Hexadecimal = base16 (0-9 A-f)
+    Base64 = 64 symbols (A-z,a-z,0-9,+,/)
+    (=) is to represent a null value
+
+  ~Lan Topologies
+    Bus - two way hits every station
+    Star - one central node
+    Ring - everyone connected to everyone one way flow
+    Mesh - everyone connected to everyone usually networking devices
+    Wireless - radius to connect to (roaming) reconnect as you move
+    Hierarchial - (Companies, Organizations) Internet, core, distribution, Access
+    Users not at core layer.
+
+  ~Devices
+    Hubs - Input data and foward it 
+    Repeaters - Extend Range
+    Switches - Network foward to specific address
+    Routers - connect to other networks
+
+  ~Ethernet Timing (Bit-Time)
+    Speed	Bit-time
+    10 Mbps  100ns
+    100 Mbps  10ns
+    1 Gbps  1ns
+    10 Gbps  .1ns
+    100 Gbps  .01ns
+
+  ~Layer 2 (2 Sub-Layers)
+    MAC -Medium Access Control
+    LLC - Logical Link Control
+     
+    Header - Layer 2 to Layer 7
+    Data - Payload
+    Footer - FCS/CRC
+    
+  ~Switch Operation
+    Building MAC-Address (CAM) Table
+      Learns by reading Source MAC addresses
+    Forwarding Frames
+      Decision based on Destination MAC address
+
+  Switching Modes
+    Cut-Through
+    Fragment-Free
+    Store-and-Forward
+
+  ~CAM Tabel Overflow Attack
+    Send frames with bogus source MAC address to switch
+    Cause switch to fill table with bogus addresses
+    Switch will not be able to learn new (valid) MAC addresses
+
+  ~Mac Addressing (Length: 48-bit | 6 byte | 12 Hex)
+    Format:
+      Windows: 01-23-45-12-34-56
+      Unix/Linux: 01:23:45:12:34:56
+      Cisco: 1234.5612.3456
+
+    Parts:
+      OUI - First 24-bits assigned by IANA
+      Vendor Assigned - Last 24-bits assigned by vendor
+
+  Types
+    Unicast: One to one 8th bit is off
+    Multicast: One to many 8th bit is on
+    Broadcast: One to all All bits on
+
+  ~MAC Spoofing
+    Could not be changed at first
+    Used to be called:
+    hardware
+    firmware
+    burned-in
+    Now it can be changed w/ software
+
+  ~VLAN 
+    Default - VLAN 1
+    Data - User traffic
+    Voice - VOIP traffic
+    Management - Switch and router management
+    Native - Untagged switch and router traffic
+
+  ~VLAN Spoofing Attcak
+    Switch Spoofing (DTP)
+    Single Tagging
+    Double Tagging (using native VLAN)
+    SCAPY - application to build code
+
+  ~ARP
+    Types
+      ARP (OP 1 and 2)
+      RARP (OP 3 and 4)
+      Proxy ARP (OP 2)
+      Gratuitous ARP (OP 2)
+
+  ~ARP Cache
+    All resolved MAC to IP resolutions
+    If MAC is not in cache then ARP is used
+    Dynamic entries last from 2-20 minutes
+    Default gateway is present at minimum
+    Can be easily duped by attackers
+
+  ~Man-in-the-middle (MITM) w/ ARP
+    Poison ARP Cache with:
+      Gratuitous ARP
+      Proxy ARP
+
+  ~VLAN Trunking Protocol (VTP)
+    Dynamically add/remove/modify VLANs
+    Cisco proprietary
+      Modes:Server,Client,Transparent
+      
+    VTP Vulnerability
+      Can cause switches to dump all VLAN information
+      Cause a DoS as switch will not support configured VLANS
+
+  ~Dynamic Trunking Protocol
+    Used to dynamically create trunk links
+    Cisco proprietary
+      Modes:Dynamic-Auto,Dynamic-Desirable
+
+  (DTP) Vulnerability
+    On by default
+    Can send crafted messages to form a VLAN trunk link
+    Recommend to:
+    Disable DTP negotiations
+    Manually assign as Access or Trunk
+
+  ~CDP
+    CDP, FDP, and LLDP
+    Cisco Discovery Protocol (CDP)
+    Foundry Discovery Protocol (FDP)
+    Link Layer Discovery Protocol (LLDP)
+
+  CDP, FDP, and LLDP Vulnerability
+    Leaks valuable information
+    Clear Text
+    Enabled by default
+
+    Disable it:
+      Globally
+      Per interface
+      May require it for VOIP
+
+  ~Spanning Tree Protocol (STP)
+    Root decision process
+    Elect root Bridge
+    Identify the Root ports on non-root bridge
+    Identify the Designated port for each segment
+    Set alternate ports to blocking state
+  Types
+    802.1D STP
+    Per VLAN Spanning Tree + (PVST+)
+    802.1w – Rapid Spanning Tree Protocol (RSTP)
+    Rapid Per VLAN Spanning Tree + (RPVST+)
+    802.1s (Multiple Spanning Tree)
+
+  ~Spanning Tree Attack
+    Crafted Bridge Protocol Data units (BPDU)
+    Used to perform a DoS or MitM
+
+  ~Port Security
+    Shutdown (default)
+    Protect
+    Restrict
+
+
+
+
+
+    
+    
+
+      
+      
+
+
+
+
+    
+  
+
+    
+      
+    
+
+    
+      
+    
