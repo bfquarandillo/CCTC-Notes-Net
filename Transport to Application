@@ -271,6 +271,65 @@
     Vulnerable to crafted packet injection
     Can break time sensitive applications
 
+  ~AAA Protocols
+    Authentication, Authorization, and Accounting
+    For third party authentication
+
+  ~TACACS(TCP 49)
+    Simple/Extended
+
+  ~Radius(UDP 1645/1646 And 1812/1813)
+
+  ~Diameter(TCP 3868)
+
+  ~SNMP(UDP 161/162)
+    Versions:
+      SNMPv1 - RFC 1157
+      SNMPv2c - RFC 1441
+      SNMPv3 - RFC 3410
+
+    SNMP Manager (Server)
+    SNMP Agents (on clients)
+    Management Information Base (MIB)
+
+  7 Message Types:
+    Get Request
+    Set Request
+    Get Next
+    Get Bulk
+    Response
+    Trap - Trigger (if X happens do Y)
+    Inform
+
+  ~SNMP Vulnerabilities
+    v1 and 2c
+    Weak Community Strings
+    Lack of Encryption    
+    Information Disclosure
+    Can be "sniffed"
+
+  ~RTP (UDP any above 1023)
+    RealTime Protocol
+
+  ~RDP(TCP 3389)
+    Developed by Microsoft (Open Standard)
+      No server software needed
+    Other Proprietary RDP software
+      Requires to have 3rd pary software installed
+
+  ~Kerberos (UDP 88) - ticketing service to access applications
+    Secure network authentication protocol
+    Clients obtain tickets to access services
+    Mutual authentication
+    Used by Active Directory
+
+  ~LDAP(S) (TCP 389 and 636) - interact with backend of active directory
+    Client/server model
+    Hierarchical
+    Directory schema
+    Unsecure and secure versions
+
+
 
 
   
