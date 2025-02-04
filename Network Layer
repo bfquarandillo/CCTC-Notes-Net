@@ -227,6 +227,28 @@
       'black holing' traffic
       perform MitM
 
+~Static routing
+      If you want to get to X network you go to Y location
+      Does not send updates, no bandwith minimal resources, data
+      Path predetermined. Time consuming, prone to error, Admin must intervene.
+
+~Dynamic Routing 
+      Easier to configure, intervetion not needed, scales very eaasily
+      Consumes a lot of bandwith, updates can be intercepted
+      Data path is not predetermined.
+
+~First hop redundancy protocol
+      HSRP (Hot Standby Router Protocol)- Provides default gateway redundancy using one active and one standby router
+      VRRP (Virtual Router Redundancy Protocol)- Open standard alternative to HSRP providing same functionality
+      GLBP (Gateway Load Balancing Protocol)- Supports arbitrary load balancing in addition to redundancy.
+
+~FHRP Attack
+      Intercept the FHRP message exchange
+      Inject manipulated messages
+      MitM by becoming active forwarder
+ 
+      
+
 
 
       
