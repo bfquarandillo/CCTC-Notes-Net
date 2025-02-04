@@ -175,6 +175,13 @@
     Evil Twin
     DHCP Starvation
 
+  ~Neighbor Discovery Protocol
+    Router Solicitation (Type 133)
+    Router Advertisement (Type 134)
+    Neighbor Solicitation (Type 135)
+    Neighbor Advertisement (Type 136)
+    Redirect (Type 137)
+
 
         
 
