@@ -1,4 +1,4 @@
-  Network Layer - Day 1
+      Network Layer - Day 1
 
   ~Outcomes
     Explain Layer 3 Routing Technologies
@@ -182,8 +182,52 @@
     Neighbor Advertisement (Type 136)
     Redirect (Type 137)
 
+  ~Internetwork Routing
+    Parent router uses base network
+    Allows you to control network at differnt layers
 
-        
+  ~Metrics
+    RIP: Hop
+    EIGRP: Bandwidth, Delay, Load, Reliability
+    OSPF: Cost
+    BGP (Border Gateway Protocol): Policy
+
+  ~Autonomous Systems
+    Collection of connected Internet Protocol routing prefixes under the control of one or more network operators on behalf of a single administrative entity or domain, 
+    that presents a common and clearly defined routing policy to the Internet.
+    16 or 32-bit Number
+
+  ~Routing Protocol Vulnerabilities
+    Distributed Denial of Service (DDOS)
+    Packet Mistreating Attacks (PMA)
+    Routing Table Poisoning (RTP)
+    Hit and Run DDOS (HAR)
+    Persistent Attacks (PA)
+
+  ~BGP
+    Road-map of the Internet
+    Routes traffic between Autonomous System (AS) Number
+    Advertises IP CIDR address blocks
+    Establishes Peer relationships
+    Complicated configuration
+    Complicated and slow path selection
+  Operation
+    How BGP chooses the best path:
+      Advertise a more specific route. 192.168.1.0 /24 is more specific than 192.168.0.0 /16.
+      Offer a shorter route to certain blocks of IP addresses.
+      A route to ip prefix with 4 AS 'hops" is better than route with 5 AS 'hops'
+
+  ~BGP Hijacking
+    Illegitimate advertising of addresses
+    BGP propagates false information
+    Purpose:
+      stealing prefixes
+      monitoring traffic
+      intercept (and possibly modify) Internet traffic
+      'black holing' traffic
+      perform MitM
+
+
 
       
 
