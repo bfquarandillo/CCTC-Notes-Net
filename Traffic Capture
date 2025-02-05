@@ -44,14 +44,23 @@ Traffic Capture - Day 2
     Filters are set using the SO_ATTACH_FILTER
     SO_ATTACH_FILTER allows us to attach a Berkley Packet Filter to the socket to capture incoming packets.
 
-  ~Bitwise Masking
+  ~Bitwise Masking (Turning on bits you want read)
     BPFs can read 1 (byte), 2 (half-word) or 4 (word)
     BPFs alone will only filter to the byte level
     Bit-wise masking allow filtering precision to the bit level
     Binary (0) to ignore bit
     Binary (1) to match bit
 
-  ~
+  ~P0F
+    Similar to tcpdump except it only captures traffic that matches signatures in its database file.
+      Searches for specific signatures in:
+        Most Operating Systems
+        Most Browsers
+        Search Robots
+        Command Line Tools
+
+  ~ 
+  
 
 
 
