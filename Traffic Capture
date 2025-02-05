@@ -1,0 +1,22 @@
+Traffic Capture - Day 2
+
+  ~Outcomes
+    Describe Network Traffic Sniffing
+    Perform real-time network traffic sniffing
+
+  ~Practical Use
+    Network troubleshooting
+    Diagnosing improper routing or switching
+    Identifying port/protocol misconfigurations
+    Monitor networking consumption
+    Intercepting usernames and passwords
+    Eavesdrop on network communications
+
+  ~Disadvantages
+    Requires elevate permissions - (Sudo tcpdump)
+    Can only capture what NIC can see
+    Cannot capture local traffic
+    Can consume massive amounts of system resources
+    Lost packets on busy networks
+
+  ~Two ways to capture - hardwar and software packet sniffers
