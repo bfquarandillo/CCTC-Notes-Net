@@ -20,3 +20,28 @@ Traffic Capture - Day 2
     Lost packets on busy networks
 
   ~Two ways to capture - hardwar and software packet sniffers
+
+  ~Socket types
+    User Space Sockets
+      Stream  Socket - TCP, A stream socket provides a connection-oriented and sequenced flow of data which has methods for establishment and teardown of connections as well as error detection.
+      Datagram Socket - UDP, A datagram socket is connection-less by nature. Sockets built this way can send and receive data, but there is no mechanism to retransmit data if a packet is dropped.
+    Kernel Space Sockets
+      RAW Sockets, A raw socket allows for the direct sending and receiving of IP packets without automatic protocol-specific transport layer formatting, 
+      meaning that all headers are typically included in the packet and not removed when moving up the network stack.
+
+  ~Capture Library
+    Requires root for promiscuous mode (listen on all NICs) all captured packets are created as RAW sockets.
+
+  ~Capture Programs
+    tcpdump  NetMiner
+    Wireshark  SolarWinds
+    tshark  EtterCap
+    p0f  NetworkMiner
+    BetterCap
+
+  ~
+  
+
+
+
+    
