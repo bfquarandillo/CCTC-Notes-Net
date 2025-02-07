@@ -1,4 +1,4 @@
-ifyService and Network Discovery - Day 4
+  ifyService and Network Discovery - Day 4
 
   ~Outcomes
     Define Passive Network Information Gathering
@@ -125,6 +125,69 @@ ifyService and Network Discovery - Day 4
   ~Ping a range (Ping Sweep) (foot stomp)
     for i in {1..254}; do (ping -c 1 172.16.82.$i | grep "bytes from" &)
 
+  ~NMAP Defaults
+    Default Scan:
+      User: TCP Full Connect Scan (-sT)
+      Root: TCP SYN Scan (-sS)
+    Default Ports scanned: 1000 most commonly used TCP or UDP ports
+
+  ~NMAP port states
+    open
+    closed
+    filtered - no reply, firewall filtered out
+    unfiltered - accesible but unable to determine state
+    open|filtered - unable to determine open or filtered
+    closed|filtered - IP idle scan only, closed or filtered
+
+  ~NMAP scan types (options)
+    Broadcast Ping/Ping sweep (-sP, -PE)
+    SYN scan (-sS)
+    Full connect scan (-sT)
+    Null scan (-sN)
+    FIN scan (-sF)
+    XMAS tree scan (-sX)
+    UDP scan (-sU)
+    Idle scan (-sI)
+    Decoy scan (-D)
+    ACK/Window scan (-sA)
+    RPC scan (-sR)
+    FTP scan (-b)
+    OS fingerprinting scan (-O)
+    Version scan (-sV)
+    Discovery probes
+    ICMP ping (-PE)
+    No Ping (-Pn)
+ 
+  ~NMAP Timeout
+    -T0 - Paranoid - 300 Sec
+    -T1 - Sneaky - 15 Sec
+    -T2 - Polite - 1 Sec
+    -T3 - Normal - 1 Sec
+    -T4 - Aggresive - 500 ms (use this)
+    -T5 - Insane - 250 ms
+
+  ~NMAP Delay
+    --scan-delay <time> - Minimum delay between probes
+    --max-scan-delay <time> - Max delay between probes
+
+  ~NMAP Rate Limit
+    --min-rate <number> - Minimum packets per second
+    --max-rate <number> - Max packets per second
+
+  ~Traceroute Firewalking
+    Set TTL value to right before the firewall
+    See if traffic can pass before going through the firewall
+
+  ~Netcat scanning
+    -z : Port scanning mode i.e. zero I/O mode
+    -v : Be verbose [use twice -vv to be more verbose]
+    -n : do not resolve ip addresses
+    -w1 : Set time out value to 1
+    -u : To switch to UDP
+
+  ~
+  ~
+  ~
   ~
   ~
   ~
