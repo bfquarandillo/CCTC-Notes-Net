@@ -1,4 +1,4 @@
-Service and Network Discovery - Day 4
+ifyService and Network Discovery - Day 4
 
   ~Outcomes
     Define Passive Network Information Gathering
@@ -51,11 +51,51 @@ Service and Network Discovery - Day 4
     iplocation.net
     infosniper.net
     
-  ~
-  ~
-  ~
-  ~
-  ~
+  ~Identify External 3rd Part sites
+    Parent/Subordinate organizations
+    Clients/Customers
+    Service organizations
+    Partners
+
+  ~Identify People
+    Target website
+    Crawler tools like Maltego or Creepy
+    Search engines
+    Social Media
+    Job Portals
+    Tracking active emails
+    Family Tree
+
+  ~Identify Technologies
+    File extensions
+    Server responses
+    Job listing
+    Website content
+    Google Hacking
+    Shodan.io
+    MAC OUI Lookup
+
+  ~Content of Interest
+    /etc/passwd and /etc/shadow or SAM database
+    Configuration files
+    Log files
+    Backup files
+    Test pages
+    Client-side code
+
+  ~Identify Vulnerabilities
+    Known Technologies
+    Error messages responses
+    Identify running services
+    Identify running OS
+    Monitor running Applications
+
+  ~Dig vs Whois
+    Whois - queries DNS registrar over TCP port 43
+      Information about the owner who registered the domain
+    Dig - queries DNS server over UDP port 53
+      Name to IP records
+
   ~
   ~
   ~
