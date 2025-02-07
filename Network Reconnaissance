@@ -1,0 +1,68 @@
+Service and Network Discovery - Day 4
+
+  ~Outcomes
+    Define Passive Network Information Gathering
+    Define Network Collection Devices and Relevant Data
+    Discuss Passive Network Analysis
+    Use Network Analysis Tools
+    Discuss Active Network Reconnaissance
+    Perform Scans and Analyze Results
+    Discuss Network Artifact Correlation
+    Complete Network Reconnaissance
+
+  ~Recon Stages
+    Passive External - OSINT, DNS, Google searches, people technology.
+    Active External - external scanning banner grabbing ping nmap netcat
+    Passive Internal - native tools ip address arp cache netstat
+    Active Internal - internal scanning network ports 
+    
+  ~Recon Steps
+    Network Footprinting - Collect info relating to target: network, systems, organization
+    Network Scanning - Port scanning, Network scanning, vulnerability scanning
+    Network Enumeration - Network resources, users, routing tables, auditing service settings, names snmp and dns details.
+    Vulnerability Assessment - Injection, broken authentication, sensitive data exposure, security misconfiguration. software with known vulnerability.
+    
+  ~Passive Recon Activities
+    IP Addresses and Sub-domains
+    Identifying External/3rd Party sites
+    Identifying People
+    Identifying Technologies
+    Identifying Content of Interest
+    Identifying Vulnerabilities
+    
+  ~DNS Lookups
+    DNS Lookups:
+    arin.net
+    whois.domaintools.com
+    viewdns.info
+    dnsdumpster.com
+    centralops.net
+    
+  ~IP addresses and sub domains
+    URL scans
+      sitereport.netcraft.com
+      web-check.xyz
+      web-check.as93.net
+      urlscan.io
+      
+  ~IP Geolocation lookup
+    maxmind.com
+    iplocation.io
+    iplocation.net
+    infosniper.net
+    
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  
