@@ -96,11 +96,35 @@ ifyService and Network Discovery - Day 4
     Dig - queries DNS server over UDP port 53
       Name to IP records
 
-  ~
-  ~
-  ~
-  ~
-  ~
+  ~P0f
+    Examine packets sent to/from target
+    Can guess Operating Systems and version
+    Can guess client/server application and version
+
+  ~Social Tactics
+    Social Engineering (Hack a person)
+    Technical based (Email/SMS/Bluetooth)
+    Other Types (Dumpster Diving/Shoulder Surf)
+
+  ~Scanning Strategy
+    Remote to Local - red team network probe
+    Local to Remote - off site equipment
+    Local to Local - local sec manager
+    Remote to Remote - remote site validating remote site
+
+  ~Scanning Approach
+    Aim
+      Wide range target scan
+      Target specific scan
+    Method
+      Single source scan
+      1-to-1 or 1-to-many
+    Distributed scan
+      many-to-one or many-to-many
+
+  ~Ping a range (Ping Sweep) (foot stomp)
+    for i in {1..254}; do (ping -c 1 172.16.82.$i | grep "bytes from" &)
+
   ~
   ~
   ~
