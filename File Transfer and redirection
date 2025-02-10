@@ -1,0 +1,48 @@
+File Transfer Day-5
+
+  ~Outcomes
+    Describe Data Transfer and Exfiltration
+    Demonstrate File Transfer 
+
+  ~Standard File Transfer Methods
+      Describe common file transfer methods
+    Understand the use of Active and Passive FTP modes
+    Use SCP to transfer files
+    
+  ~Methods of transferring data
+    TFTP
+    FTP
+    Active
+    Passive
+    FTPS
+    SFTP
+    SCP
+    
+  ~TFTP
+    Trivial File Transfer Protocol
+    RFC 1350 Rev2
+    UDP transport
+    Extremely small and very simple communication
+    No terminal communication
+    Insecure (no authentication or encryption)
+    No directory services
+    Used often for technologies such as BOOTP and PXE
+    
+  ~FTP
+    File Transfer Protocol
+    RFC 959
+    Uses 2 separate TCP connections
+    Control Connection (21) / Data Connection (20*)
+    Authentication in clear-text
+    Insecure in default configuration
+    Has directory services
+    Anonymous login
+    
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
