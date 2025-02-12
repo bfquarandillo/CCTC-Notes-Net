@@ -1,4 +1,4 @@
-Network Analysis - Day 6
+    Network Analysis - Day 6
 
   ~Outcomes
     Discuss Network Traffic Baselining
@@ -160,14 +160,83 @@ Network Analysis - Day 6
     Command and Control - manipulate victim via remote channels
     Actions/Objectives - hands on keyboard access
 
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
+  ~Indicators
+
+  ~Anomaly Detection
+    Indicator of Attack (IOA)
+    Proactive
+    A series of actions that are suspicious together
+    Focus on Intent
+    Looks for what must happen
+    Code execution. persistence, lateral movement, etc.
+
+  ~Anomaly Detection
+    Indicator of Compromise (IOC)
+    Reactive
+    Forensic Evidence
+    Provides Information that can change
+    Malware, IP addresses, exploits, signatures
+
+  ~Some Indicators
+    .exe/executable files
+    NOP sled
+    Repeated Letters
+    Well Known Signatures
+    Mismatched Protocols
+    Unusual traffic
+    Large amounts of traffic/ unusual times
+
+  ~Signs of IOA
+    Destination IP/Ports
+    Public Servers/DMZs
+    Off-Hours
+    Network Scans
+    Alarm Events
+    Malware Reinfection
+    Remote logins
+    High amounts of some protocols
+
+  ~Signs of IOC
+    Unusual traffic outbound
+    Anomalous user login or account use
+    Size of responses for HTML
+    High number of requests for the same files
+    Using non-standard ports/ application-port mismatch
+    Writing changes to the registry/system files
+    Unexpected/unusual patching or tasks
+
+  ~Determine Network Anomalies through Traffic Analysis
+    
+  ~ICMP Tunneling
+    ICMP PING uses Type 8 and Type 0
+    Both should be:
+    1 for 1
+    Same size and payload
+    Look out for:
+    Request/Reply imbalances
+    Abnormal/different payloads
+
+  ~DNS Tunneling
+    DNS uses Query/Response
+    1 Query typically gets 1 response
+    Look out for:
+    Query/Response imbalances
+    Abnormal/different payloads
+    Continuous Queries
+
+  ~HTTP(s) Tunneling
+    HTTP is "bursty" in nature
+    Client issues request and the server responds
+    Look out for:
+    Steady connections
+    HTTPs you will need to check session establishment for abnormalities
+
+  ~Beaconing
+    Call back to the C&C server
+    Gets/sends commands from/to C&C
+    Look out for:
+    Beacon Timing
+    Commonly at regular intervals
+    Beacon Size
+    Check-Ins may not have any payloads
+    Orders will have payloads
