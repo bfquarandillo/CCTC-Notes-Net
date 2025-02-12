@@ -151,7 +151,15 @@ Network Analysis - Day 6
     Forensic Analysis
     Reporting and Documentation
 
-  ~
+  ~Lockheed Martin Cuber Killchain
+    Reconnaissance - Harvesting email/conference info
+    Weaponization - exploit with backdoor or deliverable payload
+    Delivery - Delivering weaponized bundle, email usb etc.
+    Exploitation - expploiting vulnerability to execute code
+    Installation - Installing malware
+    Command and Control - manipulate victim via remote channels
+    Actions/Objectives - hands on keyboard access
+
   ~
   ~
   ~
