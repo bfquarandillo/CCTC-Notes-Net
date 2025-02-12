@@ -57,16 +57,65 @@ Network Analysis - Day 6
     Variances in the RFC implementation for different OS’s and systems enables the capability for fingerprinting
     Tools used for fingerprinting and host identification can be used passively(sniffing/fingerprinting) or actively(scanning)
       
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
-  ~
+  ~Fingerprinting
+
+  ~Active OS fingerprinting
+    Easier
+    Send packets to the target and monitor response
+    Tools:
+      Nmap
+      Xprobe2
+      sinfp3
+
+  ~Passive OS fingerprinting
+    More difficult
+    Rely on sniffing packets
+    Tools:
+      p0f
+      Ettercap
+      PRADS
+
+  ~Windows
+    88 - Kerberos / Domain Controller
+    137/138/139 - NetBIOS
+    445 - SMB
+
+  ~Linux
+    22 - SSH
+    111 - SUN RPC
+
+  ~Ephemeral Ports
+    IANA 49152–65535
+    Linux 32768–60999
+    Windows XP 1025–5000
+    Win 7/8/10 use IANA
+    Win Server 2008 1025–60000
+    Sun Solaris 32768–65535
+
+  ~Protocol specific identifiers
+    HTTP: User-agent strings (web browser can identify client info)
+    SSH: Initial connection
+    NetBIOS Name Service (resolves netbios names to IPs)
+
+  ~P0f
+    Looks at variations in initial TTL, fragmentation flag, default IP header packet length, window size, and TCP options
+    Configuration stored in:
+    /etc/p0f/p0f.fp
+
+  ~Network Traffic Baselining
+    
+  ~What is Baselining?
+    Snapshot of what the network looks like during a time frame
+    No industry standard
+    7 days to establish the initial snapshot (but a month is preferred)
+    Prerequisite Information
+
+  ~Network Baseline Objective
+    Determines the current state of your network
+    Ascertain the current utilization of network resources
+    Identify normal vs peak network traffic time frames
+    Verify port/protocol usage
+
   ~
   ~
   ~
