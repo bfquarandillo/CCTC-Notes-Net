@@ -116,10 +116,41 @@ Network Analysis - Day 6
     Identify normal vs peak network traffic time frames
     Verify port/protocol usage
 
-  ~
-  ~
-  ~
-  ~
+  ~Preparation:
+    Network Diagram
+    Known Servers, Hosts, and Networking devices
+    Known IPs, ports, and protocols
+    Known forbidden IPs, ports, and protocols
+    Known traffic "flows"
+
+  ~Perform Baselining
+    Scope and Objectives:
+      What traffic/protocols to capture?
+      Which network segments?
+      Which days?
+      What times?
+
+  ~Traffic flow through protocol analysis
+    Using Wireshark
+    Common Display Filters
+    Protocol Hierarchy
+    Conversations
+    Endpoints
+    I/O Graph
+    IPv4 and IPv6 Statistics
+    Expert Information
+    File Magic Numbers
+    Follow Protocol Streams
+    Apply as Filter options
+
+  ~Network Forensics
+    Preparation
+    Data Collection
+    Analysis
+    Timeline Reconstruction
+    Forensic Analysis
+    Reporting and Documentation
+
   ~
   ~
   ~
