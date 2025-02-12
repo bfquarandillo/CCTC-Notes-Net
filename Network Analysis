@@ -1,0 +1,85 @@
+Network Analysis - Day 6
+
+  ~Outcomes
+    Discuss Network Traffic Baselining
+    Discuss How to Analyze Network Statistics
+    Demonstrate Network Statistics
+    Identify Types of Malware
+    Discuss Post Compromise Analysis
+    Demonstrate Anomaly Analysis
+    Define Decoding
+    Demonstrate Decoding
+
+  ~Tools
+    -Sensors
+      In-Line
+        Test Access Point (TAP)
+        Man-in-the-Middle (MitM)
+      Out of Band (Passive)
+        Switched Port Analyzer (SPAN)
+
+  ~In-line Sensor
+    Placed between communicating devices to stop attack 
+    Intrusion Prevention System (IPS)
+    Firewall
+    Impacts network latency
+
+  ~Passive Sensor
+    Monitors network segments
+    Can detect attacks but cannot stop them
+    Gets copies of network traffic
+      Intrusion Detection System (IDS)
+    Does not impact network latency
+
+  ~TAP
+    Appliance placed between 2 network devices
+    Best for packet collection with no data loss
+    Must be placed "in line" of network traffic
+    Not Scalable
+    Will need several installed to capture traffic for other network segments
+
+  ~MITM
+    Attacker can use ARP or some other method/protocol
+    Attackers can sniff or manipulate traffic that flows through them
+    Typically must be on the same network as the victim
+    Traffic capture is dependent on the attacker’s system and bandwidth
+
+  ~Span
+    Configured on the network Switch
+    Best for packet collection of traffic from several switch ports at once
+    Scalable
+    Can have a high degree of packet loss
+    Places burden on the network Switch
+
+  ~Defaul Characteristics For System Identification
+
+  ~Fingerprinting and Host Identification
+    Variances in the RFC implementation for different OS’s and systems enables the capability for fingerprinting
+    Tools used for fingerprinting and host identification can be used passively(sniffing/fingerprinting) or actively(scanning)
+      
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
+  ~
